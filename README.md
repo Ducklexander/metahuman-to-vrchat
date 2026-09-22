@@ -2,9 +2,9 @@
 
 A MetaHuman as a VRChat avatar, with the face driven by a webcam.
 
-<img src="media/demo_face_tracking.gif" width="360" alt="The avatar in a VRChat mirror, face driven by a laptop webcam">
+<a href="https://www.youtube.com/watch?v=C5apf9lgOeQ"><img src="media/demo_face_tracking.gif" width="360" alt="The avatar in a VRChat mirror, face driven by a laptop webcam"></a>
 
-[Full demo video (35 s)](https://github.com/Ducklexander/metahuman-to-vrchat/releases/download/v0.1.0/metahuman-vrchat-demo.mp4)
+[Watch the demo on YouTube](https://www.youtube.com/watch?v=C5apf9lgOeQ)
 
 I made a MetaHuman in Unreal Engine 5.6, baked its RigLogic face into 172 blendshapes in Blender, set it up in Unity with Jerry's ARKit face-tracking template, and drove it in VRChat with my laptop webcam through FoxyFace and VRCFaceTracking. These are the tools I used, cleaned up so they work with any MetaHuman. MetaHuman files are not included; you export your own.
 
