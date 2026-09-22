@@ -1,0 +1,13 @@
+{
+  "name": "com.ducklexander.metahuman-vrchat",
+  "displayName": "MetaHuman to VRChat Tools",
+  "version": "0.1.0",
+  "unity": "2022.3",
+  "description": "Import settings, Poiyomi material presets, avatar setup and a pre-upload check for MetaHuman avatars baked with the metahuman-to-vrchat Blender pipeline.",
+  "author": { "name": "Ducklexander", "url": "https://github.com/Ducklexander" },
+  "license": "MIT",
+  "keywords": ["vrchat", "metahuman", "face tracking", "vrcft"],
+  "vpmDependencies": {
+    "com.vrchat.avatars": ">=3.10.4"
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "name": "Ducklexander.MetaHumanVRChat.Editor",
+    "rootNamespace": "Ducklexander.MetaHumanVRChat",
+    "references": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [
+        "VRC_SDK_VRCSDK3"
+    ],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,40 @@
+# Copy this file into your MetaHuman export folder as config.toml and edit the paths.
+# Relative paths are resolved from the folder this file is in.
+#
+#   python build.py my_metahuman/config.toml
+
+[blender]
+# Blender 5.1 with the Poly Hammer Character DNA extension installed.
+exe = "C:/Program Files/Blender Foundation/Blender 5.1/blender.exe"
+
+[input]
+# MetaHuman Creator > MetaHuman Character menu > Save Face DNA / Save Body DNA.
+# body.dna must be in the same folder as head.dna.
+head_dna = "DCC/head.dna"
+
+# MetaHuman Character menu > Save Face Textures (needs the *_Cavity.png).
+face_textures_dir = "DCC/FaceTextures"
+
+# The T_Head_*, T_Body_*, T_Eye*, T_Teeth_* PNGs exported from the Content Browser.
+textures_dir = "Textures"
+
+# Hair and eyebrow card meshes (LOD1) exported as FBX. Leave empty if your MetaHuman has none.
+hair_fbx = "Hair/Hair_CardsMesh_Group0_LOD1.fbx"
+eyebrow_fbx = "Hair/Eyebrows_CardMesh_Group0_LOD1.fbx"
+
+# Optional hair colour values (see docs/02-unreal-export.md). Without it the hair is neutral brown.
+hair_params = "Hair/hair_params.json"
+
+[output]
+# Everything the build writes. It contains your MetaHuman: keep it out of public repositories.
+work_dir = "work"
+fbx = "work/Avatar.fbx"
+
+[mesh]
+# Body triangle budget after decimation. The head cannot be decimated (it carries the blendshapes).
+body_tri_target = 28000
+atlas_seed = 4242
+
+[bake]
+# Adds a combined vrc.blink shape so the avatar blinks when face tracking is off. Untested in VRChat.
+add_vrc_blink = false

@@ -1,0 +1,44 @@
+# ---- Never commit MetaHuman source assets or anything derived from them (see LICENSE-AUDIT.md)
+*.dna
+*.fbx
+*.FBX
+*.blend
+*.blend1
+*.blend2
+*.uasset
+*.umap
+*.vrca
+work/
+**/work/
+Source-MetaHuman/
+Export-To-Unity/
+
+# Per-character pipeline outputs
+corrective_shape_keys.json
+addon_poses_raw.json
+bake_result.json
+hair_reuv_result.json
+fbx_verification.json
+run_result.json
+texture_build_result.json
+hair_atlas_result.json
+hair_params.json
+
+# Full-size media lives in GitHub Releases / the website's R2, not in git
+media/_raw/
+media/_work/
+*.mov
+*.mkv
+
+# Unity / tooling
+[Ll]ibrary/
+[Tt]emp/
+[Ll]ogs/
+UserSettings/
+*.log
+.mcp.json
+.env
+__pycache__/
+*.pyc
+.vscode/
+.idea/
