@@ -1,7 +1,5 @@
 # 4. Unity and VRChat upload
 
-About 20 minutes, most of it one slow FBX import.
-
 ## Steps
 
 1. **Create the project.** In VCC, create a VRChat Avatar project with Unity **2022.3.22f1** and add VRCFury, Jerry's VRCFT Templates and Poiyomi Toon ([versions and repos](01-prerequisites.md#software-and-tested-versions)).
@@ -9,7 +7,7 @@ About 20 minutes, most of it one slow FBX import.
 2. **Add this repo's Unity package.** Window > Package Manager > `+` > Add package from git URL:
 
    ```
-   https://github.com/Ducklexander/metahuman-to-vrchat.git?path=/unity/com.ducklexander.metahuman-vrchat
+   https://github.com/Ducklexander/metahuman-to-vrchat.git?path=/unity/com.ducklexander.metahuman-vrchat#v0.1.0
    ```
 
    Needs Git on the PATH. When it worked, the menu **Tools > MetaHuman to VRChat** exists.
@@ -48,9 +46,7 @@ In VRChat, switch to the avatar in front of a mirror. The avatar should be the r
 | Materials | Poiyomi presets | Tuned values from my avatar, including four lighting fixes so the avatar picks up world light |
 | Template | `VF_ARKit_VRCFT`, with `VF_EyeRotation` removed | Otherwise eye movement is doubled while tracking |
 
-The steps are also available one by one under **Advanced**. The reasons behind each value are in the [notes](notes.md#unity-and-vrchat).
-
-![Blue and warm test worlds: Poiyomi defaults (left pair) and the preset values (right pair)](../media/world_light_before_after.jpg)
+The three steps are also available one by one under **Advanced**.
 
 ## Performance Rank
 
@@ -89,4 +85,3 @@ Only the triangle count is bad. The meshes that carry the blendshapes need 61,53
 | No PhysBones | No hair bones in the skeleton. If you add some, divide radii by 100 |
 | SDK warning about the pelvis/thigh angle | Affects full-body IK only; harmless on desktop |
 | 55 Unified Expressions shapes unused | The ARKit template uses the ARKit 52. The Unified template would need renamed shapes; untested |
-| Red glow on shadowed skin on my own uploaded avatar | Caused by a LUT the tools no longer use |

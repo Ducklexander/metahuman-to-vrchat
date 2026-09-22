@@ -25,6 +25,7 @@ foreach ($rel in $files) {
         "ASSET    $rel"; $hits++; continue
     }
     if ($rel -like 'tools/privacy_scan.ps1') { continue }
+    if ('.png', '.jpg', '.gif', '.mp4', '.webm' -contains [IO.Path]::GetExtension($rel).ToLower()) { continue }
     if ((Get-Item $path).Length -gt 5MB) { continue }
     $text = [IO.File]::ReadAllText($path)
     foreach ($name in $patterns.Keys) {

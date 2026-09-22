@@ -1,6 +1,6 @@
 # 2. Unreal Engine: make and export your MetaHuman
 
-Since UE 5.6, MetaHuman Creator runs inside the Unreal Editor, and the MetaHuman license allows MetaHumans in other engines and platforms (see [LICENSE-AUDIT.md](../LICENSE-AUDIT.md)). Before June 2025 this whole project would not have been allowed.
+Since UE 5.6, MetaHuman Creator runs inside the Unreal Editor, and the [MetaHuman license](https://www.metahuman.com/license) allows MetaHumans in other engines and platforms. Keep your exported files private: the license allows using them in an avatar, not publishing the raw files.
 
 You need four things out of Unreal:
 
@@ -54,7 +54,7 @@ UE's MetaHuman hair is a strand groom plus generated card meshes for lower LODs.
 1. Find the static meshes named like `Hair_<Style>_CardsMesh_Group0_LOD1` and `Eyebrows_<Style>_CardMesh_Group0_LOD1` (mine were `Hair_M_BobMessy_...` and `Eyebrows_M_Dense_...`).
 2. Right-click > Asset Actions > Export > FBX. Default FBX options are fine.
 
-Use LOD1, not LOD0. My LOD0 hair was 34,093 triangles; LOD1 was 18,738 and looks the same at avatar viewing distance. The head alone is already over 60k triangles and cannot be reduced (see [notes](notes.md#why-the-triangle-count-stays-high)).
+Use LOD1, not LOD0. My LOD0 hair was 34,093 triangles; LOD1 was 18,738 and looks the same at avatar viewing distance. The head alone is already over 60k triangles and cannot be reduced, because it carries the blendshapes.
 
 What does not work, so you do not spend time on it: the groom itself cannot be exported (the Groom plugin only registers an importer), and the hair cards have no texture atlas to export. UE's hair shader (`M_hair_v4`) is procedural. The texture step paints a strand atlas instead.
 

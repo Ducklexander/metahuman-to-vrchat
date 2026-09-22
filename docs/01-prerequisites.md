@@ -17,7 +17,7 @@ macOS and Linux are untested. The Blender and texture steps are plain Python and
 
 | Account | Why | Notes |
 | --- | --- | --- |
-| Epic Games | Unreal Engine 5.6 and MetaHuman Creator | MetaHuman is free under USD 1M annual revenue. See [the license notes](../LICENSE-AUDIT.md). |
+| Epic Games | Unreal Engine 5.6 and MetaHuman Creator | MetaHuman is free under USD 1M annual revenue. See [metahuman.com/license](https://www.metahuman.com/license). |
 | Poly Hammer (free) | Downloads the Character DNA Blender extension | The free edition is only on Poly Hammer's own extension server, which needs an API token from your account dashboard. GitHub releases have source only. |
 | VRChat | Uploading the avatar | Must be a VRChat account, not a Steam, Meta or Viveport login, and at least **New User** trust rank. VRChat raises your rank from time spent in the game; a brand new account cannot upload. |
 | Steam | VRCFaceTracking | Free on Steam (app 3329480). |
@@ -69,17 +69,4 @@ vpm add package adjerry91.vrcft.templates@7.0.5 -p D:\Unity\MyAvatar
 vpm add package com.poiyomi.toon@9.3.64 -p D:\Unity\MyAvatar
 ```
 
-`vpm new` picks the newest SDK. On the day I wrote this, GitHub was returning 504 for the 3.10.5 download and `vpm new` failed; adding 3.10.4 explicitly worked from the local VCC cache.
-
-## Disk space and time
-
-| Step | Time on my machine | Notes |
-| --- | --- | --- |
-| Unreal install + MetaHuman Creator | an evening | UE 5.6 is a large download (tens of GB). Sculpting the face is the only creative step and takes as long as you want. |
-| Unreal export | 30 minutes | Mostly finding the right assets the first time |
-| Build (`build.py`: Blender bake and textures) | about 2 minutes | Headless |
-| Unity setup | about 20 minutes | Of which about 8 minutes is one FBX reimport |
-| First upload | 10 minutes | |
-| Face tracking setup | 30 minutes | Calibration is extra; see [chapter 5](05-face-tracking.md) |
-
-Keep your MetaHuman export, the `work/` folder and your Unity project out of any public repository. They contain your MetaHuman.
+Keep your MetaHuman export, the `work/` folder and your Unity project out of any public repository.

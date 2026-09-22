@@ -63,4 +63,3 @@ For an automatic blink when face tracking is off, set `add_vrc_blink = true` und
 | Tracebacks at startup naming other add-ons | Another Blender extension is broken on 5.1. Harmless here |
 | Hair is neutral brown | No `hair_params` file. See [chapter 2](02-unreal-export.md#hair-colour) |
 
-Why the bake works the way it does, and the addon bugs it works around: [notes](notes.md#blender-bake).
