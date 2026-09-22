@@ -200,7 +200,7 @@ namespace Ducklexander.MetaHumanVRChat
             var list = string.Join(", ", unlocked);
             if (IsBuildOnly())
             {
-                Debug.LogWarning($"[MH2VRC] Build-only run: Poiyomi materials are not locked ({list}). That is expected here; they must be locked by the time you test or upload.");
+                Debug.LogWarning($"[MH2VRC] Build-only run: Poiyomi materials are not locked ({list}). VRCFury skips Poiyomi's lock step for build-only runs, so this bundle would show them pink. Build and Test / Build and Upload lock them first; or run Lock Poiyomi Materials before building.");
                 return true;
             }
             Debug.LogError($"[MH2VRC] Build stopped: these Poiyomi materials are not locked and would render magenta in VRChat: {list}. "

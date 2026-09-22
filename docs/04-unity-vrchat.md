@@ -76,7 +76,8 @@ Only the triangle count is bad. The meshes that carry the blendshapes need 61,53
 | Build error about Read/Write or Streaming Mip Maps | Run Advanced > 1 again |
 | Build stopped with `[MH2VRC] Build stopped: ... not locked` | Run **Lock Poiyomi Materials**, then build again |
 | Part of the avatar is magenta in VRChat | A material was uploaded unlocked. Lock, check, re-upload |
-| Build hangs with no log output | A hidden dialog is waiting (Poiyomi's lighting fix or Save Scene). Find it and answer it |
+| Build hangs with no log output | A hidden dialog is waiting (Poiyomi's lighting fix, "Unlocked Shader", or Save Scene). Find it and answer it |
+| Dialog "Shader Optimizer: Unlocked Shader" | You built without testing or uploading, so nothing locked the materials. Run **Lock Poiyomi Materials** first, or use Build and Test |
 | Re-upload fails with `This file was already uploaded` | Take a new thumbnail |
 | Eyes move twice as far while tracking | `VF_EyeRotation` is back under the template. Delete it |
 

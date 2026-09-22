@@ -54,7 +54,8 @@ The head, teeth, eyes and lashes carry the blendshapes (61,534 triangles in my r
   ![Unlocked, locked with my LUT, locked without it](../media/lut_lock_compare.jpg)
 
 - **`VF_EyeRotation` doubles eye movement.** Jerry's ARKit template moves the eyes with blendshapes in its FX layer, and `VF_EyeRotation` moves the eye bones from the same parameters. The setup removes it. When tracking is off, the template hands the eyes back to VRChat and the bone-based Eye Look works.
-- **Scripted builds stop at dialogs.** Thry's "Automatic Lighting Fix" and Unity's Save Scene dialog both block a build started from a script, with no log output and no CPU use.
+- **Scripted builds stop at dialogs.** Thry's "Automatic Lighting Fix", Thry's "Shader Optimizer: Unlocked Shader" and Unity's Save Scene dialog all block a build started from a script, with no log output and no CPU use.
+- **Build-only runs do not lock materials.** VRCFury skips Poiyomi's lock step unless the SDK is actually testing or uploading, and Thry then strips the unlocked shaders from the bundle (it warns with the "Unlocked Shader" dialog). Build and Test and Build and Upload are fine. For a scripted build-only check, lock the materials first.
 - **Re-uploads need a new thumbnail.** VRChat's file API rejects a byte-identical file, and fails after the bundle is already uploaded (`This file was already uploaded`).
 - **Driving the editor from scripts or an AI assistant:** long calls can time out on the caller's side while Unity keeps working, and some tools resend the command. One timed-out reimport queued three extra 8-minute reimports for me. Check `Editor.log` before retrying.
 

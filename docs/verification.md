@@ -92,4 +92,6 @@ Problems this test found, all fixed before the numbers above:
 3. **The view position was 12 mm too far back** compared with my original descriptor. The setup now adds that offset.
 4. **Scripted builds stop at dialogs.** The build waited on a Save Scene dialog (the test scene had never been saved) and then on Thry's "Automatic Lighting Fix" dialog, both with no log output. This is the behaviour documented in chapter 4 and the notes; it is not a package bug.
 
+Later I re-ran the Unity side through the one-click **Set Up Avatar** path with the `build.py` outputs: 541 s including the reimport, identical results to the table above (73,466 vertices, 172 blendshapes, 54 Humanoid bones, same view position and eye rotations, template without `VF_EyeRotation`, 0 errors), and a successful build-only run. That build-only run used unlocked materials and Thry showed its "Unlocked Shader" dialog, as described in the notes.
+
 Not tested: Build and Test, Build and Upload (no upload was made from the new project), and the package in any Unity version other than 2022.3.22f1.

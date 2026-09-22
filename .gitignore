@@ -42,3 +42,6 @@ __pycache__/
 *.pyc
 .vscode/
 .idea/
+
+# Local report for the maintainer (contains local paths)
+PUBLISH-REPORT.md
